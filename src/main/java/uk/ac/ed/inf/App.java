@@ -13,19 +13,19 @@ public class App {
 
         String db_machine = "localhost";
         String web_machine = "localhost";
-        String db_port = args[4];
+        /**String db_port = args[4];
         String web_port = args[3];
 
         String year = args[2];
         String month = args[1];
-        String day = args[0];
+        String day = args[0];*/
 
-        /**String db_port = "9876";
+        String db_port = "9876";
         String web_port = "9898";
 
         String year = "2022";
         String month = "01";
-        String day = "01";*/
+        String day = "01";
 
         String date = year + "-" + month + "-" + day;
         System.out.println("Planning the drone's path for the day: " + date);

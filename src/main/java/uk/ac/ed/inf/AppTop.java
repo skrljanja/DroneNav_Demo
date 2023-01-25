@@ -14,10 +14,10 @@ import java.util.List;
  */
 public class AppTop {
 
-    public static void main( String[] args ) {
+    public static void main(String db, String web) {
 
-        String db_machine = "localhost";
-        String web_machine = "localhost";
+        String db_machine = db;
+        String web_machine = web;
         /**String db_port = args[4];
          String web_port = args[3];
 
@@ -30,15 +30,16 @@ public class AppTop {
         List<Float> ratios = new ArrayList<>();
         List<Long> times = new ArrayList<>();
 
-        String month = new String();
-        String day = new String();
+        String month;
+        String day;
         Float ratio_sum = Float.valueOf(0);
         Float ratio;
         int days = 0;
 
         String year = "2023";
-        for (int m = 7;m <= 10; m++ ) {
-            for (int d = 1;d <= 4; d++ ) {
+        // inputs of these ranges can be modified according to what is being tested !
+        for (int m = 7;m <= 8; m++ ) {
+            for (int d = 1;d <= 2; d++ ) {
                 days += 1;
                 month = String.format("%02d", m);
                 day = String.format("%02d", d);
@@ -58,7 +59,7 @@ public class AppTop {
             }
         }
 
-        Float avg_ratio = ratio_sum/days;
+        float avg_ratio = ratio_sum/days;
         Long longest_time = Collections.max(times);
 
 

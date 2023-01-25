@@ -126,6 +126,34 @@ public class AppTest {
         assertTrue(approxEq(nextPosition, appletonTower));
     }
 
+    @Test
+    public void DatabaseError() {
+        boolean thrown = false;
+        try {
+            AppTop.main("wrong", "localhost");
+        } catch (Exception e){
+            thrown = true;
+        }
+
+        assertTrue(thrown);
+    }
+
+    @Test
+    public void WebpageError() {
+        boolean thrown = false;
+        try {
+            AppTop.main("localhost", "wrong");
+        } catch (AssertionError e){
+            thrown = true;
+        }
+
+        assertTrue(thrown);
+
+    }
+
+
+
+
 
 
 }
